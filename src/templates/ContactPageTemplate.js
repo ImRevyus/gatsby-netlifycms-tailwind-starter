@@ -35,6 +35,7 @@ function ContactPageTemplate({
                   type="text"
                   name="first-name"
                   id="first-name"
+                  required // Added the required attribute
                   autoComplete="given-name"
                   className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                 />
@@ -51,6 +52,7 @@ function ContactPageTemplate({
                   type="text"
                   name="last-name"
                   id="last-name"
+                  required // Added the required attribute
                   autoComplete="family-name"
                   className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                 />
@@ -67,6 +69,7 @@ function ContactPageTemplate({
                   type="text"
                   name="email-address"
                   id="email-address"
+                  required // Added the required attribute
                   autoComplete="email"
                   className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                 />
@@ -106,6 +109,7 @@ function ContactPageTemplate({
                 <div className="mt-1">
                   <textarea
                     id="message"
+                    required // Added the required attribute
                     name="message"
                     rows={3}
                     className="shadow-sm focus:ring-green-500 focus:border-green-500 mt-1 block w-full sm:text-sm border border-gray-300 rounded-md"
