@@ -17,8 +17,11 @@ function ContactPageTemplate({
         <p className="mt-6 text-gray-500 text-lg">
           {contactform.description}
         </p>
-        <form name="contact" method="POST" data-netlify="true" onSubmit="submit">
-        <input type="hidden" name="form-name" value="contact" />
+        <form name="contact" method="POST" data-netlify="true" onSubmit="submit" data-netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact" />
+          <div hidden>
+            <input name="bot-field" />
+          </div>
           <div className="mt-6">
             <div className="grid grid-cols-6 gap-6">
               <div className="col-span-6 sm:col-span-3">
