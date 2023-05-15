@@ -70,6 +70,7 @@ function ContactPageTemplate({
                   name="email-address"
                   id="email-address"
                   required // Added the required attribute
+                  pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                   autoComplete="email"
                   className="mt-1 focus:ring-green-500 focus:border-green-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
                 />
