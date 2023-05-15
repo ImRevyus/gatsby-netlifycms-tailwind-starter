@@ -3,6 +3,7 @@ backend:
   repo: ImRevyus/gatsby-netlifycms-tailwind-starter
   branch: main
 
+logo_url: https://admirable-selkie-a1ac96.netlify.app/static/df32d237cfcc93743259538a2aebd821/964d6/urbangarden-icon.webp
 local_backend: true
 
 media_folder: static/img
