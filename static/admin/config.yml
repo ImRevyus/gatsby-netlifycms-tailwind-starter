@@ -1,8 +1,7 @@
 backend:
-  name: git-gateway
-  branch: main
-  login: true
+  name: github
   repo: ImRevyus/gatsby-netlifycms-tailwind-starter
+  branch: main
 
 local_backend: true
 
