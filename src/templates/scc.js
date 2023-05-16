@@ -17,7 +17,6 @@ function ContactPageTemplate({
         <p className="mt-6 text-gray-500 text-lg">
           {contactform.description}
         </p>
-        <p>Thank you for the SCC</p>
       </TextImageSplit>
 
       <TextImageSplit image={office.image} imageLeft={true}>
