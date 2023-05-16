@@ -17,7 +17,7 @@ function ContactPageTemplate({
         <p className="mt-6 text-gray-500 text-lg">
           {contactform.description}
         </p>
-        <form name="contact" method="POST" data-netlify="true" onSubmit="submit" data-netlify-honeypot="bot-field">
+        <form name="contact" action="/succ/" method="POST" data-netlify="true" onSubmit="submit" data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact" />
           <div hidden>
             <input name="bot-field" />
