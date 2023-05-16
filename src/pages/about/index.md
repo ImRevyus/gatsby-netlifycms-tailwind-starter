@@ -9,7 +9,7 @@ team:
     title: Founder / CEO
   - name: Michael Foster
     title: Architect
-    image: /img/rui-silvestre-hamjpesmede-unsplash.jpg
+    image: /img/hust-wilson-njhvhxs4c0u-unsplash.jpg
   - name: Leslie Alexander
     title: Landscape Gardener
     image: /img/brooke-cagle-norsyxmhgpi-unsplash-1-.jpg
