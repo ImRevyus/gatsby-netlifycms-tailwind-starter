@@ -19,5 +19,5 @@ office:
     Email: fake@urbangarden.com\
     Phone: 01234 567 891\
     Monday to Friday 9-6pm GMT.
-  image: /img/klaudia-piaskowska-g3lrnieizq4-unsplash.jpg
+  image: /img/sirisvisual-g7f4ig7n2wu-unsplash.jpg
 ---
