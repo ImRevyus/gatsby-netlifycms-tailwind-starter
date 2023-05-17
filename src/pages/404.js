@@ -8,7 +8,7 @@ function PageNotFound() {
   return (
     <Layout title="Page not found">
       <Container className="text-center">
-        <SectionHeading><br></br><br></br><br></br>Page not found</SectionHeading>
+        <SectionHeading><br></br><br></br><br></br><br></br>Page not found</SectionHeading>
         <p className="mt-4">
           Oops! The page you are looking for has been removed or relocated.
         </p>
