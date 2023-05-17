@@ -171,3 +171,20 @@ collections:
                   { label: Image, name: image, widget: image },
                 ],
             }
+
+collections:
+  - name: "404"
+    label: "404 Page"
+    files:
+      - file: "src/pages/404.md"
+        label: "404"
+        name: "404"
+        fields:
+          - {
+              label: "Template Key",
+              name: "templateKey",
+              widget: "hidden",
+              default: "404-page",
+            }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Content", name: "content", widget: "markdown" }
