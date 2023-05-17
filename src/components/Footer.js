@@ -39,19 +39,19 @@ const Footer = () => {
                   About
                 </h3>
                 <Link
-                  to="/"
+                  to="#"
                   className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
                 >
                   Company
                 </Link>
                 <Link
-                  to="/"
+                  to="#"
                   className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
                 >
                   Community
                 </Link>
                 <Link
-                  to="/"
+                  to="#"
                   className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
                 >
                   Careers
@@ -63,19 +63,19 @@ const Footer = () => {
                   Blog
                 </h3>
                 <Link
-                  to="/"
+                  to="#"
                   className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
                 >
                   Tec
                 </Link>
                 <Link
-                  to="/"
+                  to="#"
                   className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
                 >
                   Music
                 </Link>
                 <Link
-                  to="/"
+                  to="#"
                   className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline"
                 >
                   Videos
@@ -116,12 +116,12 @@ const Footer = () => {
                 <h3 className="text-gray-700 uppercase dark:text-white">
                   Contact
                 </h3>
-                <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">
+                <a href="tel:+15266548965" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">
                   +1 526 654 8965
-                </span>
-                <span className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">
+                </a>
+                <a href="mailto:example@email.com" className="block mt-2 text-sm text-gray-600 dark:text-gray-400 hover:underline">
                   example@email.com
-                </span>
+                </a>
               </div>
             </div>
           </div>
