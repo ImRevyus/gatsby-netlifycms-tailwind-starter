@@ -8,9 +8,9 @@ function PageNotFound() {
   return (
     <Layout title="Page not found">
       <Container className="text-center">
-        <SectionHeading><br></br>Page not found</SectionHeading>
+        <SectionHeading><br></br>Thank you!</SectionHeading>
         <p className="mt-4">
-          Oops! The page you are looking for has been removed or relocated.
+        We will be in touch with you shortly.
         </p>
         <button
           className="mt-6 inline-flex items-center justify-center px-4 py-2 border border-transparent text-xs font-medium transition-colors duration-100 text-green-600 bg-white rounded-md shadow lg:text-sm group hover:bg-green-50"
