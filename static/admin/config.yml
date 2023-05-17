@@ -4,6 +4,7 @@ backend:
   branch: main
 
 local_backend: true
+logo_url: https://urbangarden.netlify.app/img/capture-d%E2%80%99%C3%A9cran-2023-05-17-181113.png
 
 media_folder: static/img
 public_folder: /img
