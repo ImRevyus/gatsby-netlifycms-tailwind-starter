@@ -1,23 +1,43 @@
-import React from 'react'
-import Header from "../components/Header"
-import { TextImageSplit, SectionHeading } from "../components/Sections"
+import React, { useState } from 'react';
+import Header from '../components/Header';
+import { TextImageSplit, SectionHeading } from '../components/Sections';
 
-function ContactPageTemplate({
-  heading,
-  subheading,
-  contactform,
-  office
-}) {
+function ContactPageTemplate({ heading, subheading, contactform, office }) {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Perform any necessary form submission handling here
+
+    // Set the form submission status to true
+    setIsSubmitted(true);
+  };
+
+  if (isSubmitted) {
+    return (
+      <div>
+        <Header heading={heading} subheading={subheading} />
+        <div className="success-page">
+          <h2>Thank you for your submission!</h2>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div>
       <Header heading={heading} subheading={subheading} />
 
       <TextImageSplit image={contactform.image}>
         <SectionHeading>{contactform.heading}</SectionHeading>
-        <p className="mt-6 text-gray-500 text-lg">
-          {contactform.description}
-        </p>
-        <form name="contact" method="POST" data-netlify="true" onSubmit="submit" data-netlify-honeypot="bot-field">
+        <p className="mt-6 text-gray-500 text-lg">{contactform.description}</p>
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          onSubmit={handleSubmit}
+          data-netlify-honeypot="bot-field"
+        >
           <input type="hidden" name="form-name" value="contact" />
           <div hidden>
             <input name="bot-field" />
