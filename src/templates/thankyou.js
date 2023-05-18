@@ -1,43 +1,26 @@
 import React from 'react'
-import Header from "../components/Header"
-import { TextImageSplit, SectionHeading } from "../components/Sections"
+import { Link, navigate } from 'gatsby'
+import Layout from '../components/Layout'
+import { SectionHeading } from '../components/Sections'
+import { Container } from '../components/Sections'
 
-function ContactPageTemplate({
-  heading,
-  subheading,
-  contactform,
-  office
-}) {
+function PageNotFound() {
   return (
-    <div>
-      <Header heading={heading} subheading={subheading} />
-
-      <TextImageSplit image={contactform.image}>
-        <SectionHeading>{contactform.heading}</SectionHeading>
-        <p className="mt-6 text-gray-500 text-lg">
-          {contactform.description}
-        </p>
-        <p>Thank you</p>
-      </TextImageSplit>
-
-      <TextImageSplit image={office.image} imageLeft={true}>
-        <p className="text-green-700 font-semibold tracking-wide">
-          {office.tagline}
-        </p>
-        <SectionHeading>{office.location}</SectionHeading>
-        <div className="mt-6 sm:flex sm:flex-row text-gray-500">
-          <div
-            className="sm:w-1/2"
-            dangerouslySetInnerHTML={{ __html: office.address.html }}
-          />
-          <div
-            className="mt-6 sm:mt-0 sm:w-1/2"
-            dangerouslySetInnerHTML={{ __html: office.phone.html }}
-          />
-        </div>
-      </TextImageSplit>
-    </div>
+    <Container className="text-center h-screen flex flex-col justify-center ">
+      <SectionHeading>Thank you</SectionHeading>
+      <p className="mt-4">
+        We will get back to you soon ma man!!!
+      </p>
+      <div>
+        <button
+          className="mt-6 inline-flex items-center justify-center px-4 py-2 border border-transparent text-xs font-medium transition-colors duration-100 text-green-600 bg-white rounded-md shadow lg:text-sm group hover:bg-green-50"
+          onClick={() => navigate(-1)}
+        >
+          Go Back
+        </button>
+      </div>
+    </Container>
   )
 }
 
-export default ContactPageTemplate
+export default PageNotFound
