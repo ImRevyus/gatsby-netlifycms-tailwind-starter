@@ -35,7 +35,7 @@ function ContactPageTemplate({
         <form
           name="contact"
           method="post"
-          action="\templates\thankyou"
+          action="\thankyou\"
           data-netlify="true"
           data-netlify-honeypot="bot-field"
           onSubmit={handleSubmit}
