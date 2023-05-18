@@ -1,43 +1,44 @@
-import React, { useState } from 'react';
-import Header from '../components/Header';
-import { TextImageSplit, SectionHeading } from '../components/Sections';
+import React from 'react'
+import Header from "../components/Header"
+import { TextImageSplit, SectionHeading } from "../components/Sections"
 
-function ContactPageTemplate({ heading, subheading, contactform, office }) {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+function handleSubmit(event) {
+  event.preventDefault();
+  const form = event.target;
+  fetch(form.getAttribute("action"), {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(new FormData(form)).toString(),
+  })
+    .then(() => {
+      // Redirect to the custom success page
+      window.location.href = form.getAttribute("action");
+    })
+    .catch((error) => console.log(error));
+}
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Perform any necessary form submission handling here
-
-    // Set the form submission status to true
-    setIsSubmitted(true);
-  };
-
-  if (isSubmitted) {
-    return (
-      <div>
-        <Header heading={heading} subheading={subheading} />
-        <div className="success-page">
-          <h2>Thank you for your submission!</h2>
-        </div>
-      </div>
-    );
-  }
-
+function ContactPageTemplate({
+  heading,
+  subheading,
+  contactform,
+  office
+}) {
   return (
     <div>
       <Header heading={heading} subheading={subheading} />
 
       <TextImageSplit image={contactform.image}>
         <SectionHeading>{contactform.heading}</SectionHeading>
-        <p className="mt-6 text-gray-500 text-lg">{contactform.description}</p>
+        <p className="mt-6 text-gray-500 text-lg">
+          {contactform.description}
+        </p>
         <form
           name="contact"
-          method="POST"
+          method="post"
+          action="/thankyou/"
           data-netlify="true"
-          action="/SuccessPage" // Set the form action to the desired URL
-          onSubmit={handleSubmit}
           data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="contact" />
           <div hidden>

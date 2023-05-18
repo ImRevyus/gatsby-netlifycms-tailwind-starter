@@ -1,11 +1,25 @@
-import React from 'react';
-import Header from '../components/Header';
-import { TextImageSplit, SectionHeading } from '../components/Sections';
+import React from 'react'
+import Header from "../components/Header"
+import { TextImageSplit, SectionHeading } from "../components/Sections"
 
-function ContactSuccessPage({ heading, subheading, office }) {
+function ContactPageTemplate({
+  heading,
+  subheading,
+  contactform,
+  office
+}) {
   return (
     <div>
       <Header heading={heading} subheading={subheading} />
+
+      <TextImageSplit image={contactform.image}>
+        <SectionHeading>{contactform.heading}</SectionHeading>
+        <p className="mt-6 text-gray-500 text-lg">
+          {contactform.description}
+        </p>
+        <p>Thank you</p>
+      </TextImageSplit>
+
       <TextImageSplit image={office.image} imageLeft={true}>
         <p className="text-green-700 font-semibold tracking-wide">
           {office.tagline}
@@ -22,11 +36,8 @@ function ContactSuccessPage({ heading, subheading, office }) {
           />
         </div>
       </TextImageSplit>
-      <div className="success-page">
-        <h2>Thank you for your submission!</h2>
-      </div>
     </div>
-  );
+  )
 }
 
-export default ContactSuccessPage;
+export default ContactPageTemplate
