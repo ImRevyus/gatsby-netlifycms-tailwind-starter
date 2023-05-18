@@ -2,21 +2,6 @@ import React from 'react'
 import Header from "../components/Header"
 import { TextImageSplit, SectionHeading } from "../components/Sections"
 
-function handleSubmit(event) {
-  event.preventDefault();
-  const form = event.target;
-  fetch(form.getAttribute("action"), {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(new FormData(form)).toString(),
-  })
-    .then(() => {
-      // Redirect to the custom success page
-      window.location.href = form.getAttribute("action");
-    })
-    .catch((error) => console.log(error));
-}
-
 function ContactPageTemplate({
   heading,
   subheading,
@@ -32,14 +17,7 @@ function ContactPageTemplate({
         <p className="mt-6 text-gray-500 text-lg">
           {contactform.description}
         </p>
-        <form
-          name="contact"
-          method="post"
-          action="/projects"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          onSubmit={handleSubmit}
-        >
+        <form name="contact" method="POST" data-netlify="true" onSubmit="submit" data-netlify-honeypot="bot-field">
           <input type="hidden" name="form-name" value="contact" />
           <div hidden>
             <input name="bot-field" />
