@@ -35,6 +35,7 @@ function ContactPageTemplate({ heading, subheading, contactform, office }) {
           name="contact"
           method="POST"
           data-netlify="true"
+          action="/SuccessPage" // Set the form action to the desired URL
           onSubmit={handleSubmit}
           data-netlify-honeypot="bot-field"
         >
